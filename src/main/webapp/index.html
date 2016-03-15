@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="weather-forecast-app">
+	<head>
+		<meta charset="utf-8">
+		<meta HTTP-EQUIV="Pragma" CONTENT="no-cache">
+		<meta HTTP-EQUIV="Expires" CONTENT="-1">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link href="assets/css/bootstrap.min.css" rel="stylesheet"/>
+		<link href="assets/css/bootstrap-theme.min.css" rel="stylesheet"/>
+		<link href="assets/css/custom.css" rel="stylesheet"/>
+		<title>Weather Forecast</title>
+	</head>
+	<body>
+		<div ui-view></div>
+
+		<!-- third party -->
+		<script src="assets/libs/angular.min.js"></script>
+		<script src="assets/libs/angular-animate.min.js"></script>
+		<script src="assets/libs/ui-bootstrap.min.js"></script>
+		<script src="assets/libs/angular-ui-router.min.js"></script>
+		<script src="assets/libs/angular-resource.min.js"></script>
+		<script src="assets/libs/checklist-model.js"></script>
+		
+		<!-- internal -->
+		<script src="app/weather-forecast.module.js"></script>
+		<script src="app/weather-forecast.routes.js"></script>
+
+		<!-- shared -->
+		<script src="app/components/shared/cityService.js"></script>
+		
+		<script src="app/components/cityList/cityListController.js"></script>
+		<script src="app/components/city/cityController.js"></script>
+		
+		<script src="app/components/forecast/forecastController.js"></script>
+		<script src="app/components/forecast/forecastService.js"></script>
+		
+	</body>
+</html>

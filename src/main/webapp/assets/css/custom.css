@@ -1,0 +1,63 @@
+.fullscreen {
+	width: 100%;
+}
+
+.ng-touched .ng-invalid-required {
+	border-color: red;
+}
+.ng-dirty .ng-invalid {
+	border-color: red;
+}
+.ng-untouched .ng-invalid {
+	border-color: #ccc; 
+}
+.ng-submitted input .ng-invalid{
+	border-color: red;
+}
+
+.src-image {
+  display: none;
+}
+
+.card {
+  overflow: hidden;
+  position: relative;
+  border: 1px solid #CCC;
+  border-radius: 8px;
+  text-align: center;
+  padding: 0;
+  background-color: #284c79;
+  color: rgb(136, 172, 217);
+}
+
+.card .header-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  z-index: 1;
+}
+.card .avatar {
+  position: relative;
+  margin-top: 15px;
+  z-index: 100;
+}
+
+.card .avatar img {
+  width: 100px;
+  height: 100px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  border: 5px solid rgba(0,0,30,0.8);
+}
+
+.top-padding { margin-top:20px; }
+
+footer {
+	background:#333;
+	color:#fff;
+	padding:5px 0;
+	text-align:center;
+}

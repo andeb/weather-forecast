@@ -1,0 +1,36 @@
+<div class="container">
+
+	<div class="row">
+		<div class="col-sm-12">
+			<h1>
+	        	Previsão para {{forecastCtrl.cityName}}
+	        </h1>		
+		</div>
+	</div>
+	
+    <div class="row">
+
+        <div class="col-sm-3" ng-repeat="forecast in forecastCtrl.forecastList">
+            <div class="card">
+                <canvas class="header-bg" width="250" height="70" id="header-blur"></canvas>
+                <div class="avatar">
+                    <img ng-src="{{'http://openweathermap.org/img/w/' + forecast.icon + '.png' }}" alt="" />
+                </div>
+                <div class="content">
+                    <p>{{ forecast.tempCelsius }}</p>
+                    <p>{{ forecast.date | date : 'dd/MM/yyyy HH:00'}}</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="row top-padding">
+    	<div class="col-sm-12">
+			<a ui-sref="/">
+				<button id="cancel" name="cancel" class="btn btn-danger">Voltar</button>
+			</a>
+    	</div>
+	</div>
+	
+</div>

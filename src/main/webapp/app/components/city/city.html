@@ -1,0 +1,43 @@
+<main ui-view="content">
+<div class="container">
+	<br>
+	<form class="form-horizontal" name="cityForm">
+		<fieldset>
+
+			<legend>Cidade</legend>
+
+			<!-- Text input-->
+			<div class="form-group">
+				<div class="alert alert-danger" role="alert" ng-if="cityCtrl.hasError">Cidade já cadastrada ou inválida!</div>
+				
+				<label class="col-md-4 control-label" for="textinput">Cidade</label>
+				<div class="col-md-5">
+					<input id="textinput" name="textinput" type="text"
+						placeholder="Cidade" class="form-control input-md" required
+						ng-model="cityCtrl.city.name"> <span class="help-block">Informe
+						o nome da cidade</span>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="col-md-4 control-label" for="save"></label>
+				<div class="col-md-8">
+					<button id="save" ng-disabled="cityForm.$invalid" name="save"
+						class="btn btn-success" ng-click="cityCtrl.saveCity()">Salvar</button>
+					<a ui-sref="/">
+						<button id="cancel" name="cancel" class="btn btn-danger">Cancelar</button>
+					</a>
+				</div>
+			</div>
+
+		</fieldset>
+	</form>
+
+</div>
+</main>
+
+<footer ui-view="footer" class="footer">
+	<p>
+		Desenvolvido por <strong>Anderson de Borba</strong>
+	</p>
+</footer>

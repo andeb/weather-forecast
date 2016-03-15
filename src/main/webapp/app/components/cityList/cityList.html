@@ -1,0 +1,35 @@
+<main class="container">
+	<br>
+	<div class="panel panel-default">
+	  <div class="panel-heading">Cidades</div>
+	
+		<table class="table table-responsive">
+			<thead>
+				<tr>
+					<th>Nome</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr ng-repeat="city in cityListCtrl.cityList">
+					<td>{{city.name}}</td>
+					<td>
+						<a ui-sref="forecast({cityName: city.name})">
+							<button type="button" class="btn btn-info">Previsão</button>
+						</a>
+						<button type="button" class="btn btn-danger" ng-click="cityListCtrl.deleteCity(city)">Excluir</button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	<div class="panel">
+		<a ui-sref="addCity">
+			<button type="button" class="btn btn-info">Nova Cidade</button>
+		</a>
+	</div>
+</main>
+
+<footer class="footer">
+	<p>Desenvolvido por <strong>Anderson Borba</strong></p>
+</footer>
