@@ -1,20 +1,20 @@
-# Previs„o do Tempo 
+# Previs√£o do Tempo 
 
-Esta aplicaÁ„o foi desenvolvida como teste para um processo seletivo. O objetivo È utilizar a API do [OpenWeather](http://openweathermap.org/api) para exibir a previs„o do tempo para uma cidade.
+Esta aplica√ß√£o foi desenvolvida como teste para um processo seletivo. O objetivo √© utilizar a API do [OpenWeather](http://openweathermap.org/api) para exibir a previs√£o do tempo para uma cidade.
 
-## ConstruÁ„o do aplicativo
+## Constru√ß√£o do aplicativo
 
-Antes de construir o projeto, verifique os prÈ-requisitos:
+Antes de construir o projeto, verifique os pr√©-requisitos:
 
 1. Node 5.8.0
 2. Npm 3.7.3
 3. Gradle 2.12
-4. JDK 8 (necess·rio estar no PATH para o Gradle utilizar para realizaÁ„o do build)
-5. Mongo no ar (È utilizado a base padr„o `test` para inserÁ„o da `collection`)
+4. JDK 8 (necess√°rio estar no PATH para o Gradle utilizar para realiza√ß√£o do build)
+5. Mongo no ar (√© utilizado a base padr√£o `test` para inser√ß√£o da `collection`)
 
 Para contruir este projeto, execute os passos abaixo:
 
-1. FaÁa clone deste repositÛrio.
+1. Fa√ßa clone deste reposit√≥rio.
 2. Execute o comando:
 
     `mongod`
@@ -29,7 +29,7 @@ Para contruir este projeto, execute os passos abaixo:
 
 5. Execute o comando:
 
-   ` ./gradlew`
+   `gradlew`
 
 6. Acessar a URL [http://localhost:8080](http://localhost:8080).
 
@@ -37,45 +37,45 @@ PS: caso ocorra o problema `Cannot find module 'npm\bin\node_modules\npm\bin\npm
 
 ## Importar projeto no Eclipse
 
-Para importar o projeto no Eclipse basta importar um projeto Gradle e apontar para o repositÛrio. Necess·rio possuir o plugin Gradle Buildship ou similar.
+Para importar o projeto no Eclipse basta importar um projeto Gradle e apontar para o reposit√≥rio. Necess√°rio possuir o plugin Gradle Buildship ou similar.
 
 ## Requisitos do sistema
 
-Os requisitos tÈcnicos s„o:
+Os requisitos t√©cnicos s√£o:
 
-1. Tela de cadastro de cidade e listagem das cidades cadastradas. Permitir o usu·rio cadastrar somente cidades validas na API (que retornem dados). Na listagem de cidades deve ter um link para visualizar os detalhes da previs„o (Tela de detalhe das previsıes).
-2. Tela de detalhe das previsıes. Exibe um "forecast" de 5 dias para a cidade.
+1. Tela de cadastro de cidade e listagem das cidades cadastradas. Permitir o usu√°rio cadastrar somente cidades validas na API (que retornem dados). Na listagem de cidades deve ter um link para visualizar os detalhes da previs√£o (Tela de detalhe das previs√µes).
+2. Tela de detalhe das previs√µes. Exibe um "forecast" de 5 dias para a cidade.
 
 ## Arquitetura
 
-Para o projeto, foi feito a distinÁ„o clara entre frontend e backend.
+Para o projeto, foi feito a distin√ß√£o clara entre frontend e backend.
 
-Para o frontend, È utilizado a stack `Angular + Bootstrap`. O objetivo È possuir uma aplicaÁ„o com frontend robusto e de f·cil manuntenÁ„o. … utilizado `gulp` para executar minificaÁ„o de arquivos CSS e JS e BrowserSync. O `Angular` se comunica com o backend atravÈs de serviÁos REST.
+Para o frontend, √© utilizado a stack `Angular + Bootstrap`. O objetivo √© possuir uma aplica√ß√£o com frontend robusto e de f√°cil manunten√ß√£o. √â utilizado `gulp` para executar minifica√ß√£o de arquivos CSS e JS e BrowserSync. O `Angular` se comunica com o backend atrav√©s de servi√ßos REST.
 
-Para a construÁ„o dos serviÁos REST È utilizado o `Spring Boot`. O objetivo È fornecer uma construÁ„o f·cil da implementaÁ„o evitando a dependÍncia de um servidor de aplicaÁ„o. Apesar de ser utilizado Spring, a troca para um JAX-RS puro È f·cil de fazer pois sÛ muda o nome das anotaÁıes utilizadas praticamente.
+Para a constru√ß√£o dos servi√ßos REST √© utilizado o `Spring Boot`. O objetivo √© fornecer uma constru√ß√£o f√°cil da implementa√ß√£o evitando a depend√™ncia de um servidor de aplica√ß√£o. Apesar de ser utilizado Spring, a troca para um JAX-RS puro √© f√°cil de fazer pois s√≥ muda o nome das anota√ß√µes utilizadas praticamente.
 
-As cidades disponÌveis para exibiÁ„o da previs„o s„o armazenadas no banco MongoDB. O objetivo È ter um banco de f·cil uso para uma necessidade simples.
+As cidades dispon√≠veis para exibi√ß√£o da previs√£o s√£o armazenadas no banco MongoDB. O objetivo √© ter um banco de f√°cil uso para uma necessidade simples.
 
-## ImplementaÁ„o
+## Implementa√ß√£o
 
-Para implementaÁ„o, foi adotado de inÌcio o uso de *scaffolding* com o `JHipster` para geraÁ„o do esqueleto do projeto. No final, o *scaffolding* gerado È verboso demais e foi feito a limpa de quase tudo, o legado do JHipster acabou sendo o arquivo `gulpfile.js` e todos as tarefas que nele possui.
+Para implementa√ß√£o, foi adotado de in√≠cio o uso de *scaffolding* com o `JHipster` para gera√ß√£o do esqueleto do projeto. No final, o *scaffolding* gerado √© verboso demais e foi feito a limpa de quase tudo, o legado do JHipster acabou sendo o arquivo `gulpfile.js` e todos as tarefas que nele possui.
 
-As classes eram poucas, mas onde era possÌvel foi feito uso da programaÁ„o funcional do Java 8 afim de mostrar o seu uso.
+As classes eram poucas, mas onde era poss√≠vel foi feito uso da programa√ß√£o funcional do Java 8 afim de mostrar o seu uso.
 
-Foi necess·rio uso somente de duas classes de domÌnio: `City` (representaÁ„o de uma cidade) e `Forecast` (representaÁ„o de uma previs„o).
+Foi necess√°rio uso somente de duas classes de dom√≠nio: `City` (representa√ß√£o de uma cidade) e `Forecast` (representa√ß√£o de uma previs√£o).
 
-Os principais componentes que corresponde os serviÁos REST s„o:
+Os principais componentes que corresponde os servi√ßos REST s√£o:
 
-1. `Resource`: endpoint dos serviÁo, onde È mapeado os serviÁos.
-2. `Service`: um resource se comunico com um serviÁo a fim de lhe oferecer informaÁıes sobre como resolver tal requisiÁ„o. No caso da previs„o, este È o ponto onde È feito o contato com a API do OpenWeather.
-3. `Repository`: no caso da cidade, esta classe se comunica com o repositÛrio do MongoDB.
-4. `DTO`: classes que carregam a comunicaÁ„o entre o backend e o frontend.
+1. `Resource`: endpoint dos servi√ßo, onde √© mapeado os servi√ßos.
+2. `Service`: um resource se comunico com um servi√ßo a fim de lhe oferecer informa√ß√µes sobre como resolver tal requisi√ß√£o. No caso da previs√£o, este √© o ponto onde √© feito o contato com a API do OpenWeather.
+3. `Repository`: no caso da cidade, esta classe se comunica com o reposit√≥rio do MongoDB.
+4. `DTO`: classes que carregam a comunica√ß√£o entre o backend e o frontend.
 
-Para contato com a API do OpenWeather foi utilizado o recurso `RestTemplate` do Spring. O retorno do serviÁo foi mapeado para um classe de domÌnio que contÈm os campos necess·rios para utilizaÁ„o no front. Esta classe de domÌnio È traduzida para o DTO que È enviado para o front. 
+Para contato com a API do OpenWeather foi utilizado o recurso `RestTemplate` do Spring. O retorno do servi√ßo foi mapeado para um classe de dom√≠nio que cont√©m os campos necess√°rios para utiliza√ß√£o no front. Esta classe de dom√≠nio √© traduzida para o DTO que √© enviado para o front. 
 
 ## Testes
 
-Foi feito um teste automatizado simples para exemplificar os testes do serviÁo de cidades. Pode ser executado atravÈs do comando:
+Foi feito um teste automatizado simples para exemplificar os testes do servi√ßo de cidades. Pode ser executado atrav√©s do comando:
 
-    `./gradlew test`
+    `gradlew test`
 
