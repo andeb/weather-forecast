@@ -77,5 +77,5 @@ Para contato com a API do OpenWeather foi utilizado o recurso `RestTemplate` do 
 
 Foi feito um teste automatizado simples para exemplificar os testes do serviço de cidades. Pode ser executado através do comando:
 
-    `gradlew test`
+    gradlew test
 
