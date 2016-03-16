@@ -50,7 +50,7 @@ Os requisitos técnicos são:
 
 Para o projeto, foi feito a distinção clara entre frontend e backend.
 
-Para o frontend, é utilizado a stack `Angular + Bootstrap`. O objetivo é possuir uma aplicação com frontend robusto e de fácil manuntenção. É utilizado `gulp` para executar minificação de arquivos CSS e JS e BrowserSync. O `Angular` se comunica com o backend através de serviços REST.
+Para o frontend, é utilizado a stack `Angular + Bootstrap`. O objetivo é possuir uma aplicação com frontend robusto e de fácil manuntenção. Não houve uma preocupação grande em deixar as telas com o melhor design possível, mas sim em mostrar o desenho de como elas interagem com o backend e um pouco de responsibilidade. É utilizado `gulp` para executar minificação de arquivos CSS e JS e BrowserSync. O `Angular` se comunica com o backend através de serviços REST.
 
 Para a construção dos serviços REST é utilizado o `Spring Boot`. O objetivo é fornecer uma construção fácil da implementação evitando a dependência de um servidor de aplicação. Apesar de ser utilizado Spring, a troca para um JAX-RS puro é fácil de fazer pois só muda o nome das anotações utilizadas praticamente.
 
