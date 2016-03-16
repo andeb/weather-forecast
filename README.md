@@ -12,7 +12,7 @@ Antes de construir o projeto, verifique os pré-requisitos:
 4. JDK 8 (necessário estar no PATH para o Gradle utilizar para realização do build)
 5. Mongo no ar (é utilizado a base padrão `test` para inserção da `collection`)
 
-Para contruir este projeto, execute os passos abaixo:
+Para construir este projeto, execute os passos abaixo:
 
 1. Faça clone deste repositório.
 2. Execute o comando:
