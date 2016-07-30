@@ -1,2 +1,8 @@
 node_modules
 npm-debug.log
+src/main/webapp/bower_components
+bin
+src/main/webapp/dist
+src/main/webapp/assets
+build
+.gradle/
